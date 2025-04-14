@@ -7,16 +7,25 @@ public class BasicCalculator {
     Scanner input = new Scanner(System.in);
 
     System.out.print("Enter the first numbers: ");
-    Float num1=input.nextFloat();
+    double num1=input.nextFloat();
 
     System.out.print("Enter the second numbers: ");
-    Float num2=input.nextFloat();
+    double num2=input.nextFloat();
 
     System.out.println("\nPossible calculation: ");
     char option=choice();
 
-    if (option== 'A' || option=='D' || option=='M' || option=='S'){
-        System.out.println(num1 + " * " + num2 + " = " + num1*num2);
+    if (option == 'A' ){
+        System.out.println(num1 + " + " + num2 + " = " + addNumbers(num1,num2));
+    }
+    else if (option=='S'){
+        System.out.println(num1 + " - " + num2 + " = " + substractNumbers(num1,num2));
+    }
+    else if(option=='M') {
+        System.out.println(num1 + " * " + num2 + " = " + multiplyNumbers(num1, num2));
+    }
+    else if(option=='D'){
+        System.out.println(num1 + " * " + num2 + " = " + divisionNumbers(num1,num2));
     }
 
     }
@@ -27,5 +36,17 @@ public class BasicCalculator {
         String option = input.nextLine();
         char listOption = option.charAt(0);
         return listOption;
+    }
+    public static double addNumbers(double num1, double num2){
+        return num1+num2;
+    }
+    public static double substractNumbers(double num1,double num2){
+        return num1-num2;
+    }
+    public static double multiplyNumbers(double num1,double num2){
+        return num1*num2;
+    }
+    public static double divisionNumbers(double num1,double num2){
+        return num1/num2;
     }
 }
