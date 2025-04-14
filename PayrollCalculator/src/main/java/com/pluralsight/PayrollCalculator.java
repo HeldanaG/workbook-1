@@ -21,7 +21,7 @@ public class PayrollCalculator {
             System.out.println("The gross pay for "+ name + " is $" + GrossPay);
         }
         else {
-            overTime = hourWorked-40;
+            overTime = hourWorked-40; //
             GrossPay= 40 *payRate + overTime * payRate * 1.5f;
             System.out.println("The gross pay for "+ name + " including overtime is $" + GrossPay);
 
