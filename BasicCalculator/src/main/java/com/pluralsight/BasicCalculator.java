@@ -15,7 +15,7 @@ public class BasicCalculator {
     System.out.println("\nPossible calculation: ");
     char option=choice();
 
-    if (option == 'A' ){
+    if (option== 'A' ){
         System.out.println(num1 + " + " + num2 + " = " + addNumbers(num1,num2));
     }
     else if (option=='S'){
